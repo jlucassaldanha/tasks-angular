@@ -20,4 +20,8 @@ export class Tasks {
       details: ""
     }])
   }
+
+  handleDeleteTask(idToRemove: string) {
+    this.tasks.update(currentTasks => currentTasks.filter(task => task.id !== idToRemove))
+  }
 }
