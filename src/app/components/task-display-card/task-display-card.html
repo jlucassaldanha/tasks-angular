@@ -1,25 +1,23 @@
 <div>
   <details>
-    <summary>
-      @if (isEditing()) {
+    @if (isEditing()) {
+      <summary>
         <input type="text" name="title" id="title">
-      } @else {
-        {{ taskData().title }}
-      }
-    </summary>
-    <div>
-      @if (isEditing()) {
+      </summary>
+      <div>
         <input type="text" name="details" id="details">
         <div>
           <button (click)="handleDelete()">Apagar</button>
           <button (click)="handleCancelEdit()">Cancelar</button>
           <button >Salvar</button>
         </div>
-      } @else {
-        <p>{{ taskData().details }}</p>
-        <button (click)="handleEdit()">Editar</button>
-      }
-      
-    </div>
+      </div>    
+    } @else {
+      <summary>
+        {{ taskData().title }}
+      </summary>
+      <p>{{ taskData().details }}</p>
+      <button (click)="handleEdit()">Editar</button>
+    }
   </details>
 </div>
