@@ -3,3 +3,15 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+button {
+  color: whitesmoke;
+  border: none;
+  background-color: rgb(53, 141, 218);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(70, 150, 219);
+}

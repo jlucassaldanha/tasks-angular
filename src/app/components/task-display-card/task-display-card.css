@@ -1,0 +1,87 @@
+.display-div {
+  display: flex;
+  align-items: start;
+}
+
+details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 200px;
+  box-shadow: 0px 1px 2px rgb(87, 87, 87);
+}
+
+summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  padding: 5px;
+}
+
+.edit-button {
+  color: rgb(53, 141, 218);
+  background-color: white;
+}
+
+.edit-button:hover {
+  background-color: whitesmoke;
+}
+
+.delete-button {
+  color: rgb(218, 53, 53);
+  background-color: white;
+}
+
+.delete-button:hover {
+  background-color: whitesmoke;
+}
+
+.cancel-button {
+  background-color: rgb(218, 53, 53);
+}
+
+.cancel-button:hover {
+  background-color: rgb(250, 70, 70);
+}
+
+.button-div {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.details-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.title-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+#details-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+#title-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+form { 
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgb(87, 87, 87);
+}
