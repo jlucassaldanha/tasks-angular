@@ -1,0 +1,20 @@
+.nav-bar {
+  background-color: rgb(53, 141, 218);
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: rgb(53, 141, 218);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: rgb(70, 150, 219);
+}
