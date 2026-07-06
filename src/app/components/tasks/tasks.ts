@@ -21,6 +21,17 @@ export class Tasks {
     }])
   }
 
+  handleSaveTask(taskUpdated: TaskType) {
+    console.log(taskUpdated)
+    this.tasks.update(currentTasks => 
+      currentTasks.map(task => 
+        task.id === taskUpdated.id 
+          ? { ...task, title: taskUpdated.title, details: taskUpdated.details } 
+          : task
+      )
+    )
+  }
+
   handleDeleteTask(idToRemove: string) {
     this.tasks.update(currentTasks => currentTasks.filter(task => task.id !== idToRemove))
   }

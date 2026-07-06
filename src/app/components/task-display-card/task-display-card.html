@@ -1,23 +1,25 @@
 <div>
-  <details>
-    @if (isEditing()) {
-      <summary>
-        <input type="text" name="title" id="title">
-      </summary>
+  @if (isEditing()) {
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()"> 
       <div>
-        <input type="text" name="details" id="details">
+        <input type="text" name="title" id="title" formControlName="title">
+      </div>
+      <div>
+        <input type="text" name="details" id="details" formControlName="details">
         <div>
           <button (click)="handleDelete()">Apagar</button>
           <button (click)="handleCancelEdit()">Cancelar</button>
-          <button >Salvar</button>
+          <button type="submit">Salvar</button>
         </div>
-      </div>    
-    } @else {
-      <summary>
-        {{ taskData().title }}
-      </summary>
-      <p>{{ taskData().details }}</p>
-      <button (click)="handleEdit()">Editar</button>
-    }
-  </details>
+      </div>  
+    </form>  
+  } @else {
+    <details>
+    <summary>
+      {{ taskData().title }}
+    </summary>
+    <p>{{ taskData().details }}</p>
+    <button (click)="handleEdit()">Editar</button>
+    </details>
+  }
 </div>
