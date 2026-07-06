@@ -1,0 +1,8 @@
+<div>
+  @for (task of tasks(); track task.id) {
+    <app-task-display-card [taskData]="task"></app-task-display-card>
+  } @empty {
+    <p>Nenhuma tarefa registrada.</p>
+  }
+  <button (click)="handleAddTask()">Adicionar tarefa</button>
+</div>
