@@ -8,10 +8,7 @@ import { TaskDisplayCard, TaskType } from "../task-display-card/task-display-car
   styleUrl: './tasks.css',
 })
 export class Tasks {
-  tasks = signal<TaskType[]>([
-    { id: '1', title: 'titulo', details: 'detalhes'},
-    { id: '2', title: 'a', details: 'b'}
-  ])
+  tasks = signal<TaskType[]>([])
 
   handleAddTask() {
     this.tasks.update(currentTasks => [...currentTasks, { 
