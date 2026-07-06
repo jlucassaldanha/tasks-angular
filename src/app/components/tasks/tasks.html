@@ -1,4 +1,4 @@
-<div>
+<div class="main-div">
   @for (task of tasks(); track task.id) {
     <app-task-display-card [taskData]="task" (deleteRequest)="handleDeleteTask($event)" (taskSubmit)="handleSaveTask($event)"></app-task-display-card>
   } @empty {
